@@ -1,0 +1,25 @@
+<html>
+
+<body bgcolor="lavender">
+    <center>
+        <h1>Your System Information Is</h1>
+        <hr size="2" color="green">
+        <table border=2 height="50%" width="50%" bgcolor="#F7FBFF">
+            <tr bgcolor="#CFFFC6">
+                <th>System_info</th>
+                <th>Value</th>
+            </tr>
+
+            {% for key, value in result.items() %}
+
+            <tr>
+                <th> {{ key }} </th>
+                <td> {{ value }} </td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </center>
+</body>
+
+</html>

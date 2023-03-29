@@ -1,0 +1,119 @@
+<html>
+
+<body bgcolor="Lavender">
+    <center>
+        <h1>Get Your System Information</h1>
+        <hr size="3" color="red">
+        <div>
+            <form action="/home" method="POST">
+                {% if data %}
+                <div>
+                    <table height="25%" border="2" bgcolor="#E5FFF5">
+                        <tr>
+                            <h2>Select The System Information Below</h2>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>
+                                    <h4> <label for="System_Information" name="abc">Choose a System Information:</label>
+                                    </h4>
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <select name="select_val">
+                                        <option value="system">System</option>
+                                        <option value="node">Node</option>
+                                        <option value="release">Release</option>
+                                        <option value="version">Version</option>
+                                        <option value="machine">Machine</option>
+                                        <option value="processor">Processor</option>
+                                        <option value="architecture_details">Architecture Details</option>
+                                        <option value="platform_details">Platform Details</option>
+                                        <option value="virtual_memory">Virtual Memory</option>
+                                        <option value="physical_core">Physical Core</option>
+                                        <option value="logical_core">Logical Core</option>
+                                        <option value="cpu_frequency">CPU frequency</option>
+                                        <option value="min_frequency">Min frequency</option>
+                                        <option value="max_frequency">Max frequency</option>
+                                        <option value="cpu_utilization">CPU utilization</option>
+                                        <option value="per_cpu_utilization">Per CPU utilization</option>
+                                        <option value="manufacturer">Manufacturer</option>
+                                        <option value="model">Model</option>
+                                        <option value="sysname">System Name</option>
+                                        <option value="no_processors">Number of Processors</option>
+                                        <option value="systemtype">System Type</option>
+                                        <option value="systemfamily">System Family</option>
+                                        <option value="allinfo">All Information</option>
+                                    </select>
+                                </center>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <center>
+                                    <input type="submit" value="Submit">
+                                </center>
+                            </td>
+                            <td>
+                                <center><input type="reset" value="Cancel">
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                {% else %}
+                <div>
+                    <table height="25%" border="2" bgcolor="#E5FFF5">
+                        <tr>
+                            <h2>Select The System Information Below</h2>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>
+                                    <h4> <label for="System_Information" name="abc">Choose a System Information:</label>
+                                    </h4>
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <select name="select_val">
+                                        <option value="system">System</option>
+                                        <option value="node">Node</option>
+                                        <option value="release">Release</option>
+                                        <option value="version">Version</option>
+                                        <option value="machine">Machine</option>
+                                        <option value="processor">Processor</option>
+                                        <option value="architecture_details">Architecture Details</option>
+                                        <option value="platform_details">Platform Details</option>
+                                        <option value="cpu_info">Cpu_info</option>
+                                        <option value="load">Load</option>
+                                        <option value="memeory">Memory</option>
+                                        <option value="boottime">Boottime</option>
+                                        <option value="allinfo">All Information</option>
+                                    </select>
+                                </center>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <center>
+                                    <input type="submit" value="Submit">
+                                </center>
+                            </td>
+                            <td>
+                                <center><input type="reset" value="Cancel">
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                {% endif %}
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>

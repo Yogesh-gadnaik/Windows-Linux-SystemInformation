@@ -1,11 +1,11 @@
 import platform
 import psutil
-import wmi
-import pythoncom
 from datetime import datetime
 
 
 def getWindowsInfo():
+    import wmi
+    import pythoncom
     pythoncom.CoInitialize()
     object_wmi = wmi.WMI()
     my_system = object_wmi.Win32_ComputerSystem()[0]

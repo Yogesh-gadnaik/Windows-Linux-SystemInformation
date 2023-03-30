@@ -72,4 +72,16 @@ def getLinuxInfo():
     boot_time = datetime.fromtimestamp(psutil.boot_time())
     linux_sys['boottime'] = boot_time
 
+    linux_sys['physical_core'] = psutil.cpu_count(logical=False)
+
+    linux_sys['logical_core'] = psutil.cpu_count(logical=True)
+
+    linux_sys['cpu_frequency'] = psutil.cpu_freq().current
+    linux_sys['min_frequency'] = psutil.cpu_freq().min
+    linux_sys['max_frequency'] = psutil.cpu_freq().max
+
+    linux_sys['cpu_utilization'] = psutil.cpu_percent(interval=1)
+    linux_sys['per_cpu_utilization'] = psutil.cpu_percent(
+        interval=1, percpu=True)
+
     return linux_sys
